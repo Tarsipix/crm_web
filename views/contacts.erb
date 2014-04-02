@@ -1,6 +1,8 @@
 <h1>All Contacts</h1>
 
 <ul>
+  <li><a href="/">Go back to index</a></li>
+
 <% @@rolodex.contacts.each do |contact| %>
   <li><%= contact.first_name %> <%= contact.last_name %></li>
   <li><%= contact.email %></li>
