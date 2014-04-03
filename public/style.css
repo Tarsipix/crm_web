@@ -26,18 +26,24 @@ time, mark, audio, video {
 
 body
 {
+  /*background-image:url();*/
   font-family:'Helvetica';
-  background-color: rgba(226,122,63,1);
-  /*background-color: rgba(0,0,0,1);*/
-  /*background-color: #A66D4C*/
+  background-color: #f3f3f3;
 }
 
 header {
-  background-color: rgba(51,77,92,1);
+  /*background-color: #587898;*/
+}
+
+footer {
+  position: relative;
+  /*background-color: #587898;*/
+  bottom: -100px;
 }
 
 nav {
-
+  background-color: #587898;
+  /*opacity: .8;*/
 }
 
 li a {
