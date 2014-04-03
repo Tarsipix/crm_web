@@ -24,8 +24,8 @@ end
 
 get "/contacts/:id" do
   puts params
-  @contact_id = @@rolodex.find(params[:id])
-  erb :view_contact
+  @contact = @@rolodex.find(params[:id])
+  erb :show_contact
 end
 
 get "/contacts/:id/edit" do
