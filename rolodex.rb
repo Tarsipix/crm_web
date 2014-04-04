@@ -15,7 +15,8 @@ class Rolodex
   def find(contact_id)
     @contacts.find {|contact| 
       contact.id == contact_id
-      contact
+      # puts "+++++++++++++++ #{contact.id} ------ #{contact_id}"
+      # contact
     }
   end
 end

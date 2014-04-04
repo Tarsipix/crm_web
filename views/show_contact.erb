@@ -1,7 +1,8 @@
-<h1><%= @contact.first_name %> <%= @contact.last_name %></h1>
-<p><strong>Email:</strong> <%= @contact.email %></p>
+<% contact = @contact %>
+<h1><%= contact.first_name %> <%= contact.last_name %></h1>
+<p><strong>Email:</strong> <%= contact.email %></p>
 <p><strong>Note:</strong></p>
-<p><%= @contact.note %></p>
+<p><%= contact.note %></p>
 
 <!-- <a href="/contacts/:id/edit">Modify contact</a>
 <a href="/contacts/:id/delete">Delete contact</a>

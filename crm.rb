@@ -23,8 +23,7 @@ get "/contacts/new" do
 end
 
 get "/contacts/:id" do
-  puts params
-  @contact = @@rolodex.find(params[:id])
+  @contact = @@rolodex.find(params[:id].to_i)
   erb :show_contact
 end
 
