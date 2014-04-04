@@ -4,16 +4,20 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
+  <div class="outer">
   <header>
     Brian's craptacular CRM
   </header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/contacts">Contacts</a>
-  </nav>
-  <%= yield %>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/contacts">Contacts</a>
+    </nav>
+    <div class="yield">
+      <%= yield %>
+    </div> <!-- yield -->
   <footer>
     Epic footer
   </footer>
+  </div> <!-- outer  -->
 </body>
 </html>

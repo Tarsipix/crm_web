@@ -28,26 +28,39 @@
 
   body
   {
-    /*background-image:url();*/
+    position: relative;
+    background-image:url('Toronto.jpg');
     font-family:'Helvetica';
-    background-color: #f3f3f3;
+  }
+
+  .outer {
+    position: relative;
+    background-color: #fff;
+    width: 80%;
+    opacity: .6;
+    left: 10%;
+    top: 100px;
+  }
+
+  .yield {
+
   }
 
   header {
-    /*background-color: #587898;*/
+    font-size: 2em;
   }
 
   footer {
+    background-color: #587898;
     position: relative;
-    /*background-color: #587898;*/
-    bottom: -100px;
+    bottom: 100%;
   }
 
   nav {
     background-color: #587898;
-    /*opacity: .8;*/
   }
 
   a {
     text-decoration: none;
   }
+
