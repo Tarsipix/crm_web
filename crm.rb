@@ -1,11 +1,27 @@
-require_relative 'contact'
 require_relative 'rolodex'
-
 require 'sinatra'
+require 'data_mapper'
+
+DataMapper.setup(:default, "sqlite3:database.sqlite3")
+
+class Contact
+  include DataMapper::Resource
+
+  property :id, Serial
+  property :first_name, String
+  property :last_name, String
+  property :email, String
+  property :note, String
+
+  DataMapper.finalize # done defining tables, will throw error early before rest of code executes
+  DataMapper.auto_upgrade! # tries to map with definition with DB file
+
+  # an alternative to auto upgrade would be migrations which is a manual process
+end
 
 @@rolodex = Rolodex.new
-@@rolodex.add_contact(Contact.new("Brian", "Simon", "brian.simon@tarsipix.com","Test Note"))
-@@rolodex.add_contact(Contact.new("John", "Doe", "hello.goodbye@snoopy.com","Test Note 2"))
+# @@rolodex.add_contact(Contact.new("Brian", "Simon", "brian.simon@tarsipix.com","Test Note"))
+# @@rolodex.add_contact(Contact.new("John", "Doe", "hello.goodbye@snoopy.com","Test Note 2"))
 
 
 get '/' do
