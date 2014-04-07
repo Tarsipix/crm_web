@@ -43,10 +43,12 @@
   }
 
   .yield {
-
+    min-height: 500px;
   }
 
   header {
+    margin-left: 20%;
+    margin-right: 20%;
     font-size: 2em;
   }
 
@@ -54,10 +56,18 @@
     background-color: #587898;
     position: relative;
     bottom: 100%;
+    min-height: 50px;
+  }
+
+  .footer {
+    top: 20px;
+    color: #fff;
+    border: 1em;
   }
 
   nav {
     background-color: #587898;
+    color: #fff;
   }
 
   a {
